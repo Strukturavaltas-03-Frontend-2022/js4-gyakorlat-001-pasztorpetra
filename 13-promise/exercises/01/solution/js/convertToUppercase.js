@@ -14,10 +14,6 @@ const convertToUppercase = (arr = []) => {
       reject ('Error: Not all items in the array are strings!')
     }
   })
-}
-
-convertToUppercase()
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error))
+};
 
 export default convertToUppercase;
