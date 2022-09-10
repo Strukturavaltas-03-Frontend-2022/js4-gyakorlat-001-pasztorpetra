@@ -5,4 +5,20 @@
 // Ha a sorba rendezés során hiba történik akkor is rejected lesz a Promise, az Error objektum 
 // üzenet szövege ebben az esetben: 'Error: Something went wrong with sorting words.'
 
+'use strict'
+
+const sortStrings = (arr = []) => {
+  return new Promise ((resolve, reject) => {
+    try {
+      if (arr.every(item => typeof item === 'string')) {
+        resolve(arr.sort());
+      } else {
+        reject (new Error('Error: Not all items in the array are strings!'))
+      }
+    } catch (error) {
+      reject (new Error('Error: Something went wrong with sorting words!'))
+    }
+  })
+}
+
 export default sortStrings;

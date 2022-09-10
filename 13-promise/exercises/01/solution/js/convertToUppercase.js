@@ -9,9 +9,9 @@
 const convertToUppercase = (arr = []) => {
   return new Promise ((resolve, reject) => {
     if (arr.every(item => (typeof item === 'string'))) {
-      resolve(arr.map ((item) => item.toUpperCase()))
+      resolve(arr.map((item) => item.toUpperCase()))
     } else {
-      reject ('Error: Not all items in the array are strings!')
+      reject (new Error('Error: Not all items in the array are strings!'))
     }
   })
 };
