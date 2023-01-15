@@ -22,3 +22,4 @@ const sortStrings = (arr = []) => {
 }
 
 export default sortStrings;
+
